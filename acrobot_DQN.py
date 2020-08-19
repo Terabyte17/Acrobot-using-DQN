@@ -65,7 +65,7 @@ class DQN:
 		
 			
 	def target_train(self):
-		self.target_model.set_weights(self.target_model.get_weights())   #updating the weights of the target model with the model we have trained
+		self.target_model.set_weights(self.model.get_weights())   #updating the weights of the target model with the model we have trained
 		
 	def save_model(self,epoch_num):
 		self.model.save(r"C:\Users\yashs\OneDrive\Desktop/Acrobot_weights/weights"+str(epoch_num+1000)+".h5")			
